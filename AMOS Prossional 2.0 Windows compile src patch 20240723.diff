@@ -1,0 +1,72 @@
+diff  compiler/+APComp.s compiler/+APComp.s
+11063c11063
+< 	bne.	.Lim1
+---
+> 	bne.s	.Lim1
+diff  compiler/+CLib.s compiler/+CLib.s
+810c810
+< 	cmp.s	#" ",d0
+---
+> 	cmp.b	#" ",d0
+diff  compiler/+CompExt.s compiler/+CompExt.s
+1544c1544
+< 	MOVE.B	#$10,CCR
+---
+> 	MOVE.W	#$10,CCR
+1554c1554
+< 	MOVE.B	#$10,CCR
+---
+> 	MOVE.W	#$10,CCR
+diff  compiler/+Header.s compiler/+Header.s
+1184c1184
+< 	MOVE.B	#$10,CCR
+---
+> 	MOVE.W	#$10,CCR
+1194c1194
+< 	MOVE.B	#$10,CCR
+---
+> 	MOVE.W	#$10,CCR
+diff  +B.s +B.s
+549c549
+< 	bne.	.Lim1
+---
+> 	bne.s	.Lim1
+diff  +Edit.s +Edit.s
+14475c14475
+< 	cmp.s	#" ",d0
+---
+> 	cmp.b	#" ",d0
+diff  +ILib.s +ILib.s
+1305c1305
+< 	beq.s	.Skip
+---
+> 	beq.s	.Skip_a
+1308c1308
+< .Skip
+---
+> .Skip_a
+1325c1325
+< 	beq.s	.skip
+---
+> 	beq.s	.skip_b
+1328c1328
+< .skip	cmp.w	#1000,d0		* Edit / Direct?
+---
+> .skip_b	cmp.w	#1000,d0		* Edit / Direct?
+diff  +Lib.s +Lib.s
+20150c20150
+< .Dloop	bsr	.Evalue
+---
+> .Dloop_a	bsr	.Evalue
+20152c20152
+< 	beq.s	.Dloop
+---
+> 	beq.s	.Dloop_a
+20184c20184
+< .DLoop	Rbsr	L_Dia_ChrC
+---
+> .DLoop_b	Rbsr	L_Dia_ChrC
+20187c20187
+< 	bcs.s	.DLoop
+---
+> 	bcs.s	.DLoop_b
